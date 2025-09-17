@@ -4,50 +4,72 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Jingheng's Website</title>
+
+
+	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
 
-	<header>
-		<h1>Jingheng Hong</h1>
-		<p>Hello! Welcome to my website!</p>
+
+	<header class="navbar">
+		<div class="container display-flex">
+			<div class="flex-none">
+				<h1>Store Front Page</h1>
+			</div>
+			<div class="flex-stretch"></div>
+			<nav class="flex-none nav">
+				<ul class="container display-flex">
+					<li><a href="#article1">Home</a></li>
+					<li><a href="#article2">About</a></li>
+					<li><a href="#article3">Products</a></li>
+					<li><a href="#article4">Newsletters</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
-	<nav class="nav">
-		<ul>
-			<li><a href="#article1">Link 1</a></li>
-			<li><a href="#article2">Link 2</a></li>
-			<li><a href="#article3">Link 3</a></li>
-			<li><a href="#article4">Link 4</a></li>
-		</ul>
-	</nav>
+	<div class="view-window" style="background-image:url('img/sunset.jpg') ;">
+
+	</div>
 
 	<div class="container">
-		<article id="article1" class="article">
-			<h2>Article 1</h2>
+		<article id="article1" class="article card soft">
+			<div class="display-flex flex-alignc-center">
+				<div class="flex-stretch">	
+					<h2>About</h2>
+				</div>
+				<div class="flex-none">
+					<small>5:20am</small>
+				</div>
+			</div>
 			<div class="article-body">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid dolorem, voluptate soluta repudiandae labore similique, vel accusamus facilis nam. Ad consequatur laboriosam enim neque mollitia exercitationem quos sit aperiam libero accusamus. Corporis, perspiciatis amet. Consequuntur non quos voluptatum accusantium.</p>
 				<p>Ratione dolores possimus quos, ab vitae eius totam est saepe excepturi laborum incidunt officia velit quod quam dolorem! Repudiandae accusamus, iste quia velit possimus repellat numquam distinctio laborum, ex, ratione, recusandae. Libero voluptatum consequuntur minus, sunt dolor commodi veritatis, ducimus?</p>
 				<p>Cum maxime ipsum repellendus dicta sunt reiciendis iusto facilis iste, sint tempora animi ratione architecto quaerat eius suscipit natus totam illo consequuntur, labore error. Dolore quidem, nisi minima earum? Nemo, ratione. Officia natus quidem et eius modi perspiciatis, accusamus error?</p>
 			</div>
 		</article>
-		<article id="article2" class="article">
-			<h2>Article 2</h2>
+		<article id="article2" class="article card soft">
+			<h2>Products</h2>
 			<div class="article-body">
 				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique ipsam iste atque sit, asperiores eligendi, ad veritatis deserunt unde et culpa qui minima illum vitae vel perspiciatis maxime blanditiis laudantium velit reiciendis dolore possimus error praesentium, rem? Commodi, quis, officia.</p>
 				<p>Quisquam quas quia blanditiis animi tempore, incidunt esse reprehenderit minus voluptas nobis reiciendis neque veritatis, aspernatur officiis sunt magni maxime rerum praesentium autem sit consectetur nemo est, iusto temporibus in? Neque voluptatem ipsum distinctio et expedita soluta eius laudantium harum.</p>
 				<p>Quia, temporibus. Quam, natus, quos! Quo, deserunt dolore. Porro dolorum nostrum necessitatibus non, suscipit, deleniti dicta ea voluptas sequi delectus? Nostrum dicta, aspernatur quis, quae nisi, ea necessitatibus numquam consequuntur, maxime aliquam eos. Nihil iusto culpa dicta rem nostrum vero.</p>
 			</div>
 		</article>
-		<article id="article3" class="article">
-			<h2>Article 3</h2>
+	</div>
+	
+	<div class="container">
+		<article id="article3" class="article card soft">
+			<h2>Discounts</h2>
 			<div class="article-body">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eligendi praesentium voluptas delectus. Ad consectetur reiciendis corporis sunt architecto exercitationem soluta voluptatibus fugit cupiditate doloremque deserunt recusandae placeat minima consequatur optio nulla doloribus impedit iure magni, molestias quibusdam maiores vitae.</p>
 				<p>Nemo illum eum laborum deleniti quam. Aliquid, est repellendus voluptatibus quia labore consequuntur, odio animi nisi excepturi, reprehenderit pariatur, adipisci! Quo ipsam soluta, ipsum vel, animi eveniet, mollitia blanditiis nobis dolore ullam deleniti totam ducimus maxime officiis cumque? Quis, cupiditate.</p>
 				<p>Eos eaque officiis ad, facere tempore vero odit accusantium autem, incidunt quibusdam, illo adipisci nisi corporis quis praesentium asperiores iusto error provident. Reprehenderit omnis quam, adipisci minima blanditiis nulla nesciunt quaerat est consequuntur, ducimus molestias asperiores, eligendi sunt ad eum.</p>
 			</div>
 		</article>
-		<article id="article4" class="article">
-			<h2>Article 4</h2>
+		<article id="article4" class="article card soft">
+			<h2>Newsletters</h2>
 			<div class="article-body">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsum rerum quisquam debitis at exercitationem aperiam explicabo quaerat quam error dolorum quae voluptates magnam ab, perferendis vel saepe inventore magni vitae. Quos nihil illum temporibus et placeat, iure quasi animi.</p>
 				<p>Dolores harum earum, explicabo atque fugit suscipit sit aspernatur excepturi tempore, illo quas aliquid, pariatur? Tempora qui omnis dicta possimus illum mollitia nulla consectetur! Quidem sint quis voluptas asperiores suscipit fuga placeat tempora cumque vitae earum, quasi distinctio assumenda dolorem.</p>
