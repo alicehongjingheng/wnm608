@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" href="../lib/css/gridsystem.css">
 	<link rel="stylesheet" href="../css/storetheme.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/kxj0zgi.css">
 
 
 
@@ -29,8 +31,19 @@
 
 				</ul>
 			</nav>
+
 		</div>
 	</header>
+
+	<div class="card soft">
+		<div class="form-control">
+			<form class="hotdog">
+				<span>&equiv;</span>
+				<input type="search" placeholder="Search">
+			</form>
+		</div>
+		
+	</div>
 
 	<div class="container" id="tableofcontents">
 		<h2>Table of Contents</h2>
@@ -40,7 +53,7 @@
 					<li><a href="#typography">Typography</a></li>
 
 					<ul>
-						<li><a href="#headings">Headings</a></li>
+						<!-- <li><a href="#headings">Headings</a></li> -->
 						<li><a href="#paragraphs">Paragraphs</a></li>
 					</ul>
 					<li><a href="#cards">Cards</a></li>
@@ -48,6 +61,18 @@
 					<li><a href="#navigations">Navigations</a></li>
 					<li><a href="#gridsystem">Grid System</a></li>
 					<li><a href="#flexsystem">Flex System</a></li>
+					<!-- <li><a href="#tables">Tables</a></li> -->
+					<li><a href="#forms">Forms</a></li>
+					<ul>
+						<li><a href="#inputs">Inputs</a></li>
+						<li><a href="#inputs">Labels</a></li>
+						<li><a href="#inputs">Controls</a></li>
+						<li><a href="#inputs">Buttons</a></li>
+						<li><a href="#inputs">Hotdog</a></li>
+						<li><a href="#inputs">Select</a></li>
+						<li><a href="#inputs">Check Boxes</a></li>
+
+					</ul>
 				</ul>
 			</nav>
 		</div>
@@ -55,6 +80,8 @@
 
 	<div class="container" id="typography">
 		<h2>Typography</h2>
+
+		<!-- Headings 
 		<div class="card soft" id="headings">
 
 			<h3>Headings</h3>
@@ -65,6 +92,30 @@
 			<h5>Heading 5</h5>
 			<h6>Heading 6</h6>
 		</div>
+
+			-->
+
+
+	<!--- Alerts --->
+
+	<div class="card soft" id="alerts">
+		<h2>Alerts</h2>
+		<div class="alert warning">
+			<span>⚠️</span> One or more item is currently out of stock!
+		</div>
+		<div class="alert maintenance">
+			<span>⏰</span> Website is currently under maintenance, please revisit soon!
+		</div>
+		<div class="alert arrival">
+			<span>💖</span> New Arrivals Are Here!
+		</div>
+		<div class="alert sales">
+			<span>🎉</span> Weekend Sales Are Here!
+		</div>
+
+	</div>
+		
+	</div>
 
 		<div class="card soft" id="paragraphs">
 			<h3>Paragraphs</h3>
@@ -110,13 +161,15 @@
 	</div>
 
 
+	<!-- Navigation -->
+
 
 	<div class="container" id="navigations">
 		<h2>Navigations</h2>
 
 		<script>
 		const makeNav = (classes='') => {
-			const links = ['home','store','about'];
+			const links = ['Home','About','Exclusive','Newsletter','Contact'];
 			let ran = Math.floor(Math.random()*links.length);
 			document.write(`
 			<div>
@@ -132,6 +185,8 @@
 
 		}
 		</script>
+
+		<!-- Navigation Choices 
 
 		<div class="card soft">
 			<h3>Basic Nav</h3>
@@ -167,6 +222,7 @@
 			<script>makeNav('nav nav-crumbs')</script>
 
 		</div>
+				-->
 
 		<div class="card soft">
 			<h3>Material Nav</h3>
@@ -197,7 +253,9 @@
 		<h2>Flex System</h2>
 	</div>
 
+      <!-- Tables -->
 
+      <!-- Hide Tables 
 
 	<script>
 	const makeTable = (classes='') => {
@@ -274,6 +332,9 @@
 	</div>
 
 
+				-->
+
+
 		<h2 id="figures">Figures</h2>
 
 		<div class="card">
@@ -286,31 +347,31 @@
 
 		</div>
 
-		<h3>Figure Grid</h3>
+		<h3>Exclusive</h3>
 
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-4">
 				<figure class="figure">
 					<img src="https://dreamparknj.com/wp-content/uploads/2016/10/400x400-image.jpg" alt="">
-					<figcaption>Product</figcaption>
+					<figcaption>For the Beginner</figcaption>
 				</figure>
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<figure class="figure">
 					<img src="https://dreamparknj.com/wp-content/uploads/2016/10/400x400-image.jpg" alt="">
-					<figcaption>Product</figcaption>
+					<figcaption>Fresh Cuttings</figcaption>
 				</figure>
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<figure class="figure">
 					<img src="https://dreamparknj.com/wp-content/uploads/2016/10/400x400-image.jpg" alt="">
-					<figcaption>Product</figcaption>
+					<figcaption>Accessories</figcaption>
 				</figure>
 			</div>
 			
 		</div>
 
-		<h3>Product Grid</h3>
+		<h3>Plant by Type</h3>
 
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-4">
@@ -319,6 +380,22 @@
 					<figcaption>
 						<div>Product Name</div>
 						<div>$3.99</div>
+						<div class="form-control">
+							<input type="button" class="form-button" value="Add to Cart">
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure product">
+					<img src="https://dreamparknj.com/wp-content/uploads/2016/10/400x400-image.jpg" alt="">
+					<figcaption>
+						<div>Product Name</div>
+						<div>$3.99</div>
+						<div class="form-control">
+							<input type="button" class="form-button" value="Add to Cart">
+						</div>
 					</figcaption>
 				</figure>
 			</div>
@@ -328,21 +405,29 @@
 					<figcaption>
 						<div>Product Name</div>
 						<div>$3.99</div>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4">
-				<figure class="figure product">
-					<img src="https://dreamparknj.com/wp-content/uploads/2016/10/400x400-image.jpg" alt="">
-					<figcaption>
-						<div>Product Name</div>
-						<div>$3.99</div>
+					<div class="display-flex">
+						<div class="flex-stretch"></div>
+						<div class="flex-none">
+							<div class="form-select">
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>	
+						</div>
+					</div>
+
+						<div class="form-control">
+							<input type="button" class="form-button" value="Add to Cart">
+						</div>
 					</figcaption>
 				</figure>
 			</div>
 		</div>
 
-		<h3>Product Overlay</h3>
+		<h3>Accessories</h3>
 
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-4">
@@ -350,8 +435,8 @@
 					<img src="https://dreamparknj.com/wp-content/uploads/2016/10/400x400-image.jpg" alt="">
 					<figcaption>
 						<div class="caption-body">
-							<div>Product Name</div>
-							<div>$3.99</div>
+							<div>Clay Planter</div>
+							<div>$6.99</div>
 						</div>
 
 					</figcaption>
@@ -362,7 +447,7 @@
 					<img src="https://dreamparknj.com/wp-content/uploads/2016/10/400x400-image.jpg" alt="">
 					<figcaption>
 						<div class="caption-body">
-							<div>Product Name</div>
+							<div>Plant Stand</div>
 							<div>$3.99</div>
 						</div>
 					</figcaption>
@@ -373,7 +458,7 @@
 					<img src="https://dreamparknj.com/wp-content/uploads/2016/10/400x400-image.jpg" alt="">
 					<figcaption>
 						<div class="caption-body">
-							<div>Product Name</div>
+							<div>Watering Container</div>
 							<div>$3.99</div>
 						</div>
 					</figcaption>
@@ -383,7 +468,194 @@
 
 	</div>
 		
+	<div class="container" id="forms">
+		<h2>Forms</h2>
 
+		<h3>Inputs</h3>
+
+		<div class="card soft">
+			<h3>Default Inputs</h3>
+			<form>
+				<input type="text"><br>
+				<input type="number"><br>
+				<input type="passoword"><br>
+				<input type="url"><br>
+				<input type="email"><br>
+				<input type="datetime-local"><br>
+				<input type="date"><br>
+				<input type="search">
+
+			</form>
+
+			<h3>Form Input</h3>
+			<form>
+				<input type="text" placeholder="Text" class="form-input">
+				<input type="number" placeholder="Number" class="form-input"><br>
+				<input type="passoword" placeholder="Password" class="form-input"><br>
+				<input type="search" placeholder="Search" class="form-input">
+			</form>
+
+			<h3>Form Label</h3>
+			<form>
+				<label class="form-label">Example</label>
+				<input type="text" placeholder="Text" class="form-input">
+				<label class="form-label">Example</label>
+				<input type="number" placeholder="Number" class="form-input"><br>
+				<label class="form-label">Example</label>
+				<input type="passoword" placeholder="Password" class="form-input"><br>
+				<label class="form-label">Example</label>
+				<input type="search" placeholder="Search" class="form-input">
+			</form>
+
+			<h3>Form Control</h3>
+			<form>
+				<div class="form-control">
+					<label class="form-label">Example</label>
+					<input type="text" placeholder="Text" class="form-input">
+				</div>
+				<div class="form-control">
+					<label class="form-label">Example</label>
+					<input type="number" placeholder="Number" class="form-input"><br>
+				</div>
+				<div class="form-control">
+					<label class="form-label">Example</label>
+					<input type="passoword" placeholder="Password" class="form-input"><br>
+				</div>
+				<div class="form-control display-flex flex-justify-center">
+					<div class="flex-none">
+						<label class="form-label">Example</label>
+					</div>
+					<div class="flex-stretch">
+						<input type="search" placeholder="Search" class="form-input">
+					</div>
+					<div class="flex-none">
+						<label class="form-label">Example</label>
+					</div>
+					<div class="flex-stretch">
+						<input type="search" placeholder="Search" class="form-input">
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<h3>Buttons</h3>
+
+		<div class="card soft">
+			<h3>Default Buttons</h3>
+			<button>Button</button>
+
+			<h3>Form Buttons</h3>
+
+			<div class="form-control">
+				<button type="button" class="form-button">Button</button>
+			</div>
+			<div class="form-control">
+				<input type="button" class="form-button" value="Input">
+			</div>
+			<div class="form-control">
+				<a href="#" class="form-button">Anchor</a>
+			</div>
+			
+
+
+			<h2>Hotdog</h2>
+
+			<div class="card soft">
+				<div class="form-control">
+					<form>
+						<input type="search" class="hotdog" placeholder="Search">
+					</form>
+				</div>
+				<div class="form-control">
+					<form>
+						<input type="search" class="hotdog dark" placeholder="Search">
+					</form>
+				</div>
+				<div class="form-control">
+					<form class="card dark">
+						<input type="search" class="hotdog light" placeholder="Search">
+					</form>
+				</div>
+				<div class="form-control">
+					<form class="hotdog">
+						<span>&equiv;</span>
+						<input type="search" placeholder="Search">
+					</form>
+				</div>
+				<div class="form-control">
+					<form class="hotdog">
+						<input type="search" placeholder="Search">
+						<span>&equiv;</span>
+					</form>
+				</div>
+
+
+				<h2 id="select">Select</h2>
+
+				<div class="card soft">
+					<div class="form-select">
+						<select>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</div>
+					<div class="display-flex">
+						<div class="flex-stretch"></div>
+						<div class="flex-none">
+							<div class="form-select">
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>	
+						</div>
+					</div>
+				</div>
+				
+
+				<h2 id="checkboxes">Check Boxes</h2>
+
+				<div class="card soft">
+					<h3>Basic Checkbox</h3>
+					<label>Label <input type="checkbox" id="input-1"></label>
+					<label for="input-1">Label</label>
+
+
+					<h3>Heart Checkbox</h3>
+					<div class="favorite">
+						<input type="checkbox" id="heart-example" class="hidden">
+						<label for="heart-example">&hearts;</label>	
+					</div>
+
+
+					<h3>Toggle</h3>
+					<div class="toggle">
+						<input type="checkbox" id="toggle-1" class="hidden">
+						<label for="toggle-1"></label>	
+					</div>
+					<div class="display-flex flex-align-center">
+						<div class="flex-stretch">
+							<label for="toggle-2" class="form-label">Display Warning?</label>
+						</div>
+
+						<div class="flex-none">	
+							<div class="toggle" style="font-size: 2em">
+								<input type="checkbox" id="toggle-2" class="hidden">
+								<label for="toggle-2"></label>	
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
 
 
 
