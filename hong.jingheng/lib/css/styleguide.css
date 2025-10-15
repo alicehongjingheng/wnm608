@@ -89,12 +89,17 @@ a:hover {
 }
 
 
-.display-flex { display:flex;  }
+.display-flex { 
+	display:flex;  
+	align-items: center;
+}
 .display-inline-flex { display:inline-flex; }
 .display-block { display:block; }
 .display-inline-block { display:inline-block; }
 
-.flex-stretch { flex: 1 1 auto; }
+.flex-stretch { 
+	flex: 1; 
+}
 .flex-none { flex: none; }
 
 .flex-align-center { align-item:center; }
@@ -102,6 +107,11 @@ a:hover {
 
 
 /* Small Classes */
+
+@media (min-width: 900px)
+	.col-md-4{
+		width: 33.3333%;
+	}
 
 .media-image {
 	max-width: 100%;
@@ -312,20 +322,43 @@ a:hover {
 /* Make a Figure */
 
 .figure {
+	display: block;
 	margin:0;
 	background-color:var(--color-white);
+	overflow: hidden;
 }
 
 /* By default, a figure image*/
 
 .figure img {
 	width:100%;
+	height: auto;
 	vertical-align: text-bottom;
+	display: block;
+	object-fit: cover;
 }
+
+
 .figure figcaption {
 	padding: 1em;
 }
 
+.figure.product-overlay {
+	position: relative;
+}
+
+.figure.product-overlay figcaption{
+	position: absolute;
+	padding: 0.75rem 1rem;
+	display: grid;
+}
+
+.figure.product-overlay .look{
+	display: flex;
+	justify-self: space-between;
+	align-items: center;
+	font-weight: 600;
+}
 
 
 
