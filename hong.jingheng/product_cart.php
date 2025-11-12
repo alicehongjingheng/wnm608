@@ -1,3 +1,15 @@
+<?php
+
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+$cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,16 +26,33 @@
 	<?php include "parts/navbar.php"; ?>
 
 	<div class="container">
-		<div class="card soft">
-			<h2>Cart</h2>
+		<h2>Cart</h2>
+		<div class="gird gap">
+			<div class="col-xs-12 col-md-7">
+				<div class="card soft">
+					<?= array_reduce($cart,'cartListTemplate') ?>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-5">
+				<div class="card soft flat">
+					<div class="card-section display-flex">
+						<div class="flex-stretch"><strong>Sub Total</strong></div>
+						<div class="flex-none">&dollar;3.50</div>
+					</div>
+					<div class="card-section display-flex">
+						<div class="flex-stretch"><strong>Taxes</strong></div>
+						<div class="flex-none">&dollar;3.50</div>
+					</div>
+					<div class="card-section display-flex">
+						<div class="flex-stretch"><strong>Actual Total</strong></div>
+						<div class="flex-none">&dollar;7.00</div>
+					</div>
 
-			<!-- ul>li*4>a[href="product_item.php"]>{Product $} -->
-			<ul>
-				<li><a href="product_item.php?id=1">Product 1</a></li>
-				<li><a href="product_item.php?id=2">Product 2</a></li>
-				<li><a href="product_item.php?id=3">Product 3</a></li>
-				<li><a href="product_item.php?id=4">Product 4</a></li>
-			</ul>
+					<div class="card-section">
+						<a href="product_checkout.php" class="form-button">Checkout</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 

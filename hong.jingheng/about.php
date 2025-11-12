@@ -18,7 +18,7 @@
 			<h2>About</h2>
 
 			<p>
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, dicta ab, nesciunt quasi magni, quidem amet expedita, delectus quae natus harum est quis reprehenderit asperiores ex a ipsa. Natus, vitae.
+				Verdant Living offers pre-owned plants, cultivated cuttings, and unique planters. It is designed for plant lovers and home decorators who value both style and sustainability. Whether the customers are new plant parents or collectors, by giving plants and planters a second life, the store is to create a marketplace that makes plant parenthood more accessible and affordable align with their lifestyle. The purpose of this project is to extend the lifecycle of plants and planters, find them a new home, and let them shine again.
 			</p>
 		</div>
 	</div>
