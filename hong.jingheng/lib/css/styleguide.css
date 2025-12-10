@@ -102,10 +102,17 @@ a:hover {
 }
 .flex-none { flex: none; }
 
-.flex-align-center { align-item:center; }
+.flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
 
 .flex-column { flex-direction:column; }
+.flex-wrap { flex-wrap:wrap; }
+
+
+
+
+
+
 
 
 /* Small Classes */
@@ -213,13 +220,14 @@ a:hover {
 }
 
 
-
+/* Navbar */
 
 
 .navbar {
 	background-color: #264733;
 	color: var(--color-main-light);
 	line-height:var(--header-height);
+	margin-bottom: 1em;
 }
 
 
@@ -233,6 +241,10 @@ a:hover {
 
 	.navbar a{
 		padding:0 0.5em;
+	}
+
+	.flush>.navbar {
+		margin-bottom:0;
 	}
 
 	/* Navbar + nav links in Fields */
@@ -277,6 +289,14 @@ a:hover {
 
 	.card.flat {
 		padding:0;
+	}
+
+
+/*Any card that is a direct child of a column */
+/*Any element that has a class that has inside of it a col dash in it */
+	[class*='col-']>.card {
+		height: 100%;
+		margin: 0;
 	}
 
 	.card-section~.card-section {
@@ -418,7 +438,7 @@ a:hover {
 .form-button {
     background-color: var(--color-neutral-medium);
     padding: 0.5em 1em;
-    border-radius: 0.2em;
+    border-radius: 1.5em;
     cursor:pointer;
     text-align: center;
 }
@@ -456,7 +476,7 @@ a:hover {
 	display: block;
     padding: 0.5em 1.3em;
     background-color: var(--color-neutral-medium);
-    border-radius: 0.3em;
+    border-radius: 1.5em;
     cursor: pointer;
 }
 
@@ -509,6 +529,7 @@ a:hover {
 
 /* Alerts */
 .alert {
+	margin-top: 1em;
   display: flex;
   align-items: center;
   padding: 12px 20px;
