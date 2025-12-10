@@ -1,4 +1,10 @@
-<?php include_once "lib/php/functions.php"; ?>
+<?php 
+include_once "lib/php/functions.php"; 
+include_once "parts/templates.php"
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +29,7 @@
   <?php include "parts/meta.php"; ?>
 
 </head>
-<body>
+<body class="flush">
 
   <?php include "parts/navbar.php"; ?>
 
@@ -35,88 +41,41 @@
   </div>
 
 
-  <div class="container" style="margin-top:3em;">
-    <h1 class="text-center brand-title">New Release</h1>
-    <div class="grid gap">
+
+  <div class="container">
+
+      <div class="alert arrival">
+        <span>💖</span> New Arrivals Are Here!
+      </div>
       
-      <div class="col-xs-12 col-md-3">
-        <figure class="figure product">
-          <a href="product_item.php?id=1"><img src="img/monstera_obliqua_1.png" alt="Monstera Obliqua"></a>
-          <figcaption>
-            <div class="caption-top">
-              <div class="name"><a href="product_item.php?id=1">Monstera Obliqua</a></div>
-              <div class="favorite fav">
-                <input type="checkbox" id="fav_obliqua" class="hidden">
-                <label for="fav-obliqua">&hearts;</label>
-              </div>
-            </div>
-            <div class="caption-bottom">
-              <div class="price">$30</div>
-              <a href="product_cart.php" class="form-button sm">Add to Cart</a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
+    <h1 class="text-center brand-title">New Release</h1>
 
-      <div class="col-xs-12 col-md-3">
-        <figure class="figure product">
-          <a href="product_item.php?id=2"><img src="img/monstera_albosml_1.png" alt="Monstera Albo"></a>
-          <figcaption>
-            <div class="caption-top">
-              <div class="name"><a href="product_item.php?id=2">Monstera Albo 1 Leaf</a></div>
-              <div class="favorite fav">
-                <input type="checkbox" id="fav-albo" class="hidden">
-                <label for="fav-albo">&hearts;</label>
-              </div>
-            </div>
-            <div class="caption-bottom">
-              <div class="price">$25</div>
-              <a href="product_cart.php" class="form-button sm">Add to Cart</a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
+    <?php
 
-      <div class="col-xs-12 col-md-3">
-        <figure class="figure product">
-          <a href="product_item.php?id=3"><img src="img/monstera_albosml_3.png" alt="Monstera Halfmoon"></a>
-          <figcaption>
-            <div class="caption-top">
-              <div class="name"><a href="product_item.php?id=3">Monstera Half-Moon</a></div>
-              <div class="favorite fav">
-                <input type="checkbox" id="monstera-halfmoon" class="hidden">
-                <label for="monstera-halfmoon">&hearts;</label>
-              </div>
-            </div>
-            <div class="caption-bottom">
-              <div class="price">$35</div>
-              <a href="product_cart.php" class="form-button sm">Add to Cart</a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
+    $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='hoya' ORDER BY `date_create` DESC LIMIT 3");
 
-      <div class="col-xs-12 col-md-3">
-        <figure class="figure product">
-          <a href="product_item.php?id=4"><img src="img/hoya_kerri_1.png" alt="Hoya Kerri"></a>
-          <figcaption>
-            <div class="caption-top">
-              <div class="name"><a href="product_item.php?id=4">Hoya Kerri</a></div>
-              <div class="favorite fav">
-                <input type="checkbox" id="hoya-kerri" class="hidden">
-                <label for="hoya-kerri">&hearts;</label>
-              </div>
-            </div>
-            <div class="caption-bottom">
-              <div class="price">$12.99</div>
-              <a href="product_cart.php" class="form-button sm">Add to Cart</a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
+    recommendedProducts($result);
 
-    </div>
+
+    ?>
+
   </div>
+
+
+  <div class="container">
+    <h1 class="text-center brand-title">Our Recommendation</h1>
+
+    <?php
+
+    recommendedCategory("monstera");
+
+    ?>
+
+  </div>
+
+
+
+
 
 
   <div class="container">

@@ -18,5 +18,6 @@
 - http://jhongdesign.com/aau/wnm608/hong.jingheng/product_confirmation.php
 - http://jhongdesign.com/aau/wnm608/hong.jingheng/product_item.php?id=2
 
+- http://jhongdesign.com/aau/wnm608/hong.jingheng/admin/index.php
 
 

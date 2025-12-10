@@ -2,6 +2,7 @@
 
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
@@ -54,6 +55,7 @@ $image_elements = array_reduce($images,function($r,$o){
 
 					<div class="card-section">
 						<h2 class="product-name"><?= $product->name ?></h2>
+						<div class="product-category"><?= $product->category ?></div>
 						<div class="product-price">&dollar;<?= $product->price ?></div>
 					</div>
 
@@ -93,6 +95,14 @@ $image_elements = array_reduce($images,function($r,$o){
 			<p><?= $product->description ?></p>
 			
 		</div>
+
+
+		<h2>Recommended Products</h2>
+		<?php
+			recommendedSimilar($product->category,$product->id);
+
+
+		?>
 		
 		
 	</div>
