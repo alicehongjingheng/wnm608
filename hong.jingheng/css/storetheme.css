@@ -221,6 +221,12 @@ span.badge:not(:empty)::before {
 	transform:scale(1.4,1.4);
 }
 
+/* Make Cart Not stacking */
+.cart-section {
+	align-items: flex-start;
+	gap: 1rem;
+}
+
 @media (max-width:600px) {
 	.product-overlay figcaption {
 		position: relative;
@@ -236,6 +242,31 @@ span.badge:not(:empty)::before {
 		transform: none;
 		padding: 0;
 	}
+
+	
+       
+    .cart-item > .flex-none,
+    .cart-item > .flex-stretch {
+        width: 100%;
+    }
+    
+    .cart-item-info {
+        min-height: auto;
+        gap: 0.5em;
+    }
+    
+    .cart-item-price {
+        text-align: center;
+        margin-top: 1em;
+    }
+    
+    .cart-item img {
+        max-width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        object-fit: cover;
+        border-radius: 4px;
+    }
 }
 
 
