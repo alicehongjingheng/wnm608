@@ -56,7 +56,7 @@ function cartListTemplate($r,$o){
 $totalfixed = number_format($o->total,2,'.','');
 $selectamount = selectAmount($o->amount,6);
 return $r.<<<HTML
-<div class="display-flex card-section" style="align-items: flex-start; gap: 1em;">
+<div class="display-flex cart-section" style="align-items: flex-start; gap: 1em;">
     <div class="flex-none">
         <img src="img/$o->thumbnail" style="width: 80px; height: 80px; object-fit: cover;">
     </div>
